@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/prog2.dir/src/lab3.cpp.o -o /home/danila/std/lab2/lab2/bin/prog2 

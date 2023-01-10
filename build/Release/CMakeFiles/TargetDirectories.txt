@@ -1,0 +1,5 @@
+/home/danila/std/lab2/lab2/build/Release/CMakeFiles/atlas.dir
+/home/danila/std/lab2/lab2/build/Release/CMakeFiles/2dpacking.dir
+/home/danila/std/lab2/lab2/build/Release/CMakeFiles/game.dir
+/home/danila/std/lab2/lab2/build/Release/CMakeFiles/edit_cache.dir
+/home/danila/std/lab2/lab2/build/Release/CMakeFiles/rebuild_cache.dir

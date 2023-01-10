@@ -1,0 +1,43 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then
+    echo "No agrgument, need 'build' or 'clean'"
+    echo "Exit with an error"
+    exit
+fi
+
+if [ $# != 1 ]
+then
+    echo "Too much arguments, need one 'build' or 'clean'"
+    echo "Exit with an error"
+    exit
+fi
+
+if [ "$1" == "build" ]
+then
+    cmake -S . -B build/Release -DCMAKE_BUILD_TYPE=Release
+    cmake --build build/Release
+    echo "Compile phase done..."
+    sleep 1
+elif [ "$1" == "clean" ]
+then
+    if [ -d "build" ]; then
+        rm -rf ./build
+    fi
+    if [ -d "bin" ]; then
+        rm -rf ./bin
+    fi
+    exit
+else
+    echo "Bad parameter, need 'build' or 'clean'"
+    echo "Exit with an error"
+    exit
+fi
+
+#echo "Start of algorithms... "
+#sleep 1
+#./bin/prog results/NFDH_1152N.txt results/FFDH_1152N.txt data/LLNL-Atlas-2006-0
+
+# gcc -Wall -Werror main.c sortings.c wtime.c algorithms.c parser.c -o prog -DN=4096
+# ./prog NFDH_4096N.txt FFDH_4096N.txt LLNL-Atlas-2006-0

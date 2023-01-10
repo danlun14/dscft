@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -rdynamic CMakeFiles/prog.dir/src/main.c.o CMakeFiles/prog.dir/src/sortings.c.o CMakeFiles/prog.dir/src/wtime.c.o CMakeFiles/prog.dir/src/algorithms.c.o CMakeFiles/prog.dir/src/parser.c.o -o /home/danila/std/lab2/lab2/bin/prog 

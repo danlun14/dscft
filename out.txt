@@ -1,0 +1,2 @@
+ cnt_tasks	 t_packing	 t_low_bnd	       eps	  alg_time
+      1123	      6427	      6358	  0.010893	  0.000490

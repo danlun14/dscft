@@ -1,0 +1,78 @@
+if [ -z "$1" ]
+then
+    echo "No agrgument, need 'atlas' , 'custompacking' or 'game'"
+    echo ""
+    echo "Argument 'atlas' starts FFDH and NFDH algorithms with prepeared data"
+    echo "Output data here: results/"
+    echo ""
+    echo "Argument 'custompacking' needs in <outputfile> <FFDH/NFDH> <number of tasks>"
+    echo ""
+    echo "Argument 'game' starts algorithm Brooke with input data in file 'game.start'"
+    echo "Structure 'game.start':"
+    echo "'   N (number of stratagies)"
+    echo "'   c1"
+    echo "'   c2"
+    echo "'   c3"
+    echo "'   e"
+    echo "Exit with an error"
+    exit
+fi
+
+if [ "$1" == "atlas" ]
+then
+
+    echo "Run './bin/atlas'"
+    ./bin/atlas results/NFDH_1152N.txt results/FFDH_1152N.txt data/LLNL-Atlas-2006-0
+
+elif [ "$1" == "custompacking" ]
+then
+    if [ $# != 4 ]
+    then
+        echo "Incorrect using of ./Start custompacking"
+        echo "Argument 'custompacking' needs in <outputfile> <FFDH/NFDH> <number of tasks>"
+        exit
+    fi
+
+    if [ "$3" == "NFDH" ]; 
+    then :
+    elif [ "$3" == "FFDH" ];
+    then :
+    else
+        echo "Expected FFDH or NFDH"
+        echo "Argument 'custompacking' needs in <outputfile> <FFDH/NFDH> <number of tasks>"
+        exit
+    fi
+    re='^[0-9]+$'
+    if ! [[ $4 =~ $re ]] ; then
+        echo "Expected number"
+        echo "Argument 'custompacking' needs in <outputfile> <FFDH/NFDH> <number of tasks>"
+        exit 
+    fi
+    echo "Run './bin/2dpacking'"
+    ./bin/2dpacking $2 $3 $4
+
+elif [ "$1" == "game" ]
+then
+
+    echo "Run './bin/game'"
+    ./bin/game
+
+else
+        echo "No agrgument, need 'atlas' , 'custompacking' or 'game'"
+    echo ""
+    echo "Argument 'atlas' starts FFDH and NFDH algorithms with prepeared data"
+    echo "Output data here: results/"
+    echo ""
+    echo "Argument 'custompacking' needs in <outputfile> <FFDH/NFDH> <number of tasks>"
+    echo ""
+    echo "Argument 'game' starts algorithm Brooke with input data in file 'game.start'"
+    echo "Structure 'game.start':"
+    echo "'   N (number of stratagies)"
+    echo "'   c1"
+    echo "'   c2"
+    echo "'   c3"
+    echo "'   e"
+    echo "Exit with an error"
+    exit
+fi
+

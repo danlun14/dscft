@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -rdynamic CMakeFiles/atlas.dir/src/atlas.c.o CMakeFiles/atlas.dir/src/sortings.c.o CMakeFiles/atlas.dir/src/wtime.c.o CMakeFiles/atlas.dir/src/algorithms.c.o CMakeFiles/atlas.dir/src/parser.c.o -o /home/danila/std/lab2/lab2/bin/atlas 

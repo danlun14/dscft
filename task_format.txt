@@ -1,0 +1,14 @@
+Example NFDH:
+
+task_id = 3      time_limit = 91         node_count = 3          node_range = 0-2        start_time = 0          end_time = 91
+task_id = 4      time_limit = 17         node_count = 4          node_range = 0-3        start_time = 91         end_time = 108
+task_id = 1      time_limit = 13         node_count = 3          node_range = 0-2        start_time = 108        end_time = 121
+task_id = 2      time_limit = 9          node_count = 1          node_range = 3-3        start_time = 108        end_time = 117
+
+
+Example FFDH:
+
+task_id = 3      time_limit = 91         node_count = 3          node_range = 0-2        start_time = 0          end_time = 91
+task_id = 4      time_limit = 17         node_count = 4          node_range = 0-3        start_time = 91         end_time = 108
+task_id = 1      time_limit = 13         node_count = 3          node_range = 0-2        start_time = 108        end_time = 121
+task_id = 2      time_limit = 9          node_count = 1          node_range = 3-3        start_time = 0          end_time = 9
